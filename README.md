@@ -1,0 +1,2 @@
+# Code-repository
+基于阿里云OSS多语言SDK的代码片段仓库集设计方案，涵盖Java/Python双语言实现，整合文件全生命周期管理、Bucket操作及企业级扩展能力
