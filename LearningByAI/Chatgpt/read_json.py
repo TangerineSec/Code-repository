@@ -9,6 +9,7 @@ print(json.dumps(data,indent=4,ensure_ascii=False))
 
 for dept in data['departments']:
     for emp in dept['employees']:
-        print(emp['name'],emp['id'],emp['age'])
+        print(emp['name'],emp['id'],emp['age'],end=" ")
         for skill in emp['skills']:
-            print(skill)
+            print(skill,end=" ")
+        print() # 打印完一行后换行（不是空行）
