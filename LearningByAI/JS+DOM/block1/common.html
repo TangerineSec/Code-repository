@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>动态创建元素</title>
+    <style>
+        .button{
+            border: none;
+            color: rgb(241, 6, 6);
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <button type="button" id="btn" class="button"></button>
+    <script>
+        // 模版一：动态创建元素
+        const btn = document.getElementById('btn');
+        btn.addEventListener('click', function(){
+
+        let newdiv=document.createElement('div');
+        let divcontent=document.createTextNode('我是新增的段落'+new Date().toLocaleDateString());
+        newdiv.appendChild(divcontent);
+        // 将新元素包括文本添加到 dom 中。
+        let currentbtn=document.getElementById('btn');
+        document.body.insertBefore(newdiv,currentbtn);
+        });
+
+    </script>
+</body>
+</html>
